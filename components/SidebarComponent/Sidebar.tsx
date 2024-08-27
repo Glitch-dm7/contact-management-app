@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaChartLine } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
 import { RiContactsLine } from 'react-icons/ri'
@@ -14,7 +14,18 @@ const Sidebar = ({
   isOpen : boolean, close : Function
 }) => {
   const pathname = usePathname()
-  console.log(pathname)
+
+  useEffect(()=>{
+    const html = document.documentElement;
+    if (html) {
+      if (!isOpen) {
+        html.style.overflow = 'auto';
+      } else {
+        html.style.overflow = 'hidden';
+      }
+    }
+  },[isOpen])
+
   return (
     <>
       <div className={`bg-[rgba(41,45,50,0.67)] fixed inset-0 w-full h-full z-[100] ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none delay-300'}`} onClick={() => close()}>
