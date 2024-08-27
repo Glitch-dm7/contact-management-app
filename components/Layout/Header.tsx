@@ -20,7 +20,7 @@ const Header = () => {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-[8px]">
             <Image alt="Taiyo Logo" src={"/images/Taiyo_logo.png"} width={50} height={50} />
-            <h1 className="text-xl md:text-2xl">Contact Mangement</h1>
+            <h1 className="text-xl md:text-2xl text-black">Contact Mangement</h1>
           </div>
         </div>
       </header>

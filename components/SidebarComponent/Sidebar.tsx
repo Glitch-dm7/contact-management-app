@@ -13,6 +13,7 @@ const Sidebar = ({
   isOpen : boolean, close : Function
 }) => {
   const pathname = usePathname()
+  console.log(pathname)
   return (
     <>
       <div className={`bg-[rgba(41,45,50,0.67)] fixed inset-0 w-full h-full z-[100] ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none delay-300'}`} onClick={() => close()}>
@@ -28,7 +29,7 @@ const Sidebar = ({
           {/* Navlinks */}
           <ul className='flex flex-col p-3'>
             <Link href={"/"}>
-              <li className={` hover:text-white bg-[#efefef] hover:bg-[#ef5550] p-3 rounded flex items-center gap-2 ${pathname === "/" ? 'bg-[#ef5550] text-white' : 'bg-[#efefef]'} `}>
+              <li className={` hover:text-white  p-3 rounded flex items-center gap-2 ${pathname === "/" ? 'bg-[#ef5550] text-white' : 'bg-[#efefef] text-black hover:bg-[#ef5550]'} `} onClick={() => close()}>
                 <RiContactsLine /> Contact
               </li>
             </Link>
