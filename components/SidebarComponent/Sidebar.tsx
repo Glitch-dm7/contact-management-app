@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import { FaChartLine } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
 import { RiContactsLine } from 'react-icons/ri'
 
@@ -27,10 +28,16 @@ const Sidebar = ({
           </div>
 
           {/* Navlinks */}
-          <ul className='flex flex-col p-3'>
+          <ul className='flex flex-col gap-[12px] p-3'>
             <Link href={"/"}>
               <li className={` hover:text-white  p-3 rounded flex items-center gap-2 ${pathname === "/" ? 'bg-[#ef5550] text-white' : 'bg-[#efefef] text-black hover:bg-[#ef5550]'} `} onClick={() => close()}>
                 <RiContactsLine /> Contact
+              </li>
+            </Link>
+
+            <Link href={"/dashboard"}>
+              <li className={` hover:text-white  p-3 rounded flex items-center gap-2 ${pathname === "/dashboard" ? 'bg-[#ef5550] text-white' : 'bg-[#efefef] text-black hover:bg-[#ef5550]'} `} onClick={() => close()}>
+                <FaChartLine /> Chats and Maps
               </li>
             </Link>
           </ul>

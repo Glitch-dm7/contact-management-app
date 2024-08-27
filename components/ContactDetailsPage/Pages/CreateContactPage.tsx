@@ -46,6 +46,14 @@ const CreateContactPage = ({
     <>
       <div className="h-full flex flex-col justify-center items-center p-[16px]">
         <div className="flex flex-col justify-center items-center w-full max-w-[640px] rounded-[14px] bg-[#f6f6f6] p-[20px] m-[8px] shadow-xl">
+          <h2 className="text-center text-xl text-black font-medium mb-[18px]">
+            {
+              contactDetailsToBeEdited ?
+              "Edit Contact"
+              :
+              "Add New Contact"
+            }
+          </h2>
           <form onSubmit={handleSubmit} method="post">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               First Name
@@ -74,7 +82,7 @@ const CreateContactPage = ({
               </div>
             </div>
 
-            <button className="w-full py-[10px] bg-[#EF5550] rounded-[7px] text-white">Submit</button>
+            <button className="w-full py-[10px] bg-[#EF5550] rounded-[7px] text-white">{contactDetailsToBeEdited ? "Save Edited Contact" : "Save Contact"}</button>
           </form>
         </div>
       </div>
