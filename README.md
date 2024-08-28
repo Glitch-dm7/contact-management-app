@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contact Management App
+The Contact Management App is a comprehensive solution designed for managing contacts efficiently. The app features full CRUD (Create, Read, Update, Delete) operations to handle contact information and also includes a dashboard that provides insights into COVID-19 cases. The dashboard displays a graph of COVID-19 cases over time and a map highlighting country-wise distribution of cases. This app is created using NextJS framework which is built on top of ReactJS to provide a more structured and optimized codebase.
 
-## Getting Started
+## Features
+### Contacts Management
+- Create, Read, Update, Delete operations for contacts for managing contacts efficiently
+- Easy operations of contacts in just few step
 
-First, run the development server:
+### Dashboard
+- A dashboard showing covid reports till date
+- A line chart showing the cases fluctuations of COVID-19 cases over time
+- A map highlighting country-wise distribution of cases
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Libraries Used
+- Typescript to type-check the code providing a better developing experince
+- Tailwind CSS for mobile-first approach stylling providing responsive UI
+- Redux is used to store the contacts data
+- React-chart-js2 for plotting the graph of COVID-19 cases
+- React-Leaflet for showing the country-wise distribution of COVID-19 cases on map
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## APIs Used
+- World wide data of cases: https://disease.sh/v3/covid-19/all
+- Country Specific data of cases: https://disease.sh/v3/covid-19/countries
+- Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Quick Start: Installing and Running Your App
+1. Clone the repository: `git clone https://github.com/Glitch-dm7/contact-management-app.git`
+2. Install dependencies: `npm i`
+3. Start the app in dev mode: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
