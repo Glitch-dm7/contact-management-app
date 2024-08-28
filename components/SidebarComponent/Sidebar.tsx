@@ -32,7 +32,9 @@ const Sidebar = ({
         <div className={`fixed top-0 left-0 h-[100dvh] ml-auto w-full sm:w-[400px] z-[101] bg-[#FFF] transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
           {/* Sidebar Header */}
           <div className='flex justify-between items-center border-b-[1px] border-[#585858] p-3'>
-            <Image alt="Taiyo Logo" src={"/images/Taiyo_logo.png"} width={50} height={50} />
+            <Link href={"http://taiyo.ai/"} target='_blank'>
+              <Image alt="Taiyo Logo" src={"/images/Taiyo_logo.png"} width={50} height={50} />
+            </Link>
             <button onClick={() => close()}>
               <IoClose size={35} />
             </button>

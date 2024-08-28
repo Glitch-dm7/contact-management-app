@@ -28,6 +28,7 @@ const CovidMap = () => {
   )
 
   useEffect(() => {
+    // Since the api takes time to load, its better to store api response in a session so that experince is smooth
     const fetchData = async () => {
       try {
         // Check if data is already in sessionStorage

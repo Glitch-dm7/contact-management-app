@@ -4,6 +4,7 @@ import { useState } from "react"
 import Sidebar from "../SidebarComponent/Sidebar"
 import { RxHamburgerMenu } from "react-icons/rx"
 import Image from "next/image"
+import Link from "next/link"
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -22,10 +23,12 @@ const Header = () => {
           </button>
 
           {/* Centered logo and title */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-[8px]">
-            <Image alt="Taiyo Logo" src={"/images/Taiyo_logo.png"} width={50} height={50} />
-            <h1 className="text-xl md:text-2xl text-black">Contact Mangement</h1>
-          </div>
+          <Link href={"/"} className="absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-center gap-[8px]">
+              <Image alt="Taiyo Logo" src={"/images/Taiyo_logo.png"} width={50} height={50} />
+              <h1 className="text-xl md:text-2xl text-black">Contact Mangement</h1>
+            </div>
+          </Link>
         </div>
       </header>
     </>
